@@ -34,12 +34,12 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
  function summation(n) {
-   let counter = 0;
-  for (let i = 0; i <= n; i++)
+    let counter = 0;
+    for (let i = 0; i <= n; i++)
   {
     counter  = counter +  i;
   }
-  return counter;
+    return counter;
   }
  
 
@@ -66,9 +66,9 @@ const zooAnimals = [
   */
 
   function animalNames(array){
-    let displayNames = [];
-    array.forEach(function(item){
-     displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+      let displayNames = [];
+      array.forEach(function(item){
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
     })
     return displayNames;
   }
@@ -81,10 +81,10 @@ const zooAnimals = [
   */
 
   function lowerCaseNames(array){
-    let lowerCaseNames = array.map(function(item){
+      let lowerCaseNames = array.map(function(item){
       return item.animal_name.toLowerCase();
     })
-  return lowerCaseNames;
+    return lowerCaseNames;
   }
   
   
@@ -94,7 +94,7 @@ const zooAnimals = [
   */
 
   function lowPopulationAnimals(array){
-    let lowpopcount = array.filter(function(item){
+      let lowpopcount = array.filter(function(item){
       return item.population < 5 ;
     })
     return lowpopcount;
@@ -108,8 +108,8 @@ const zooAnimals = [
   */
 
   function USApop(array){
-  const totalAnimalPopulation = array.reduce(function(acc, item){
-    return acc + item.population;
+    const totalAnimalPopulation = array.reduce(function(acc, item){
+      return acc + item.population;
   },0);
   return totalAnimalPopulation;
   }
@@ -156,7 +156,9 @@ function greeting(firstname, lastname){
   
   
 // 🦁💪 Stretch: If you haven't already, convert your array method callbacks into arrow functions - make sure you comment out this section before you submit your work 🦁💪
- 
+ //const add = (a,b) => a + b;
+ //const multiply = (a,b) => a * b;
+ //const  greeting =(firstname, lastname) => `Hello ${firstname} ${lastname}, nice to meet you!`
 
 
 
@@ -198,7 +200,7 @@ CuboidMaker.prototype.volume = function(){
 /* 🐴🐴🐴 Step 4: Create a new object that uses CuboidMaker 🐴🐴🐴
   Create an object called cuboid that uses the new keyword to use our CuboidMaker constructor
   Add properties and values of length: 4, width: 5, and height: 5 to cuboid. */
- const cuboid = new CuboidMaker(4,5,5);
+ const cuboid = new CuboidMaker({length: 4, width: 5, height: 5});
  
 
 
@@ -225,7 +227,7 @@ surfaceArea(){
  return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
 }
 }
-const cuboidTwo = new CuboidMakerTwo(10, 12, 12);
+const cuboidTwo = new CuboidMakerTwo({length:6, width:7, height:7});
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
@@ -237,8 +239,19 @@ const cuboidTwo = new CuboidMakerTwo(10, 12, 12);
 
 
 // 🦄 💪 Stretch Task: Extend the base class CuboidMaker with a sub class called CubeMaker.  Find out the formulas for volume and surface area for cubes and create those methods using the dimension properties from CuboidMaker.  Test your work by logging out your volume and surface area. 🦄 💪
-  
-
+  // class CubeMaker extends CuboidMakerTwo{
+  //   constructor(atts){
+  //     super(atts);
+  //   }
+  //   cvolume(){
+  //     return (this.length * this.length * this.length); 
+  //   }
+  //   carea(){
+  //     return 6 * (Math.pow(this.length,2));
+  //   }
+  // }
+  //  const cube = new CubeMaker({length:3, width:3, height:3});
+  //  console.log(cube.cvolume());
 
 
 
