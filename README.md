@@ -29,13 +29,39 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
 
+.forEach() calls a provided callbackfn function once for each element in an array in ascending index order, while Map() object iterates its elements in insertion order
+.forEach() does not return a new array while .map() automatically returns a new array
+
 2. Explain the difference between a callback and a higher order function.
+
+Higher Order function are functions that recieves another function as an argument, while callback functions are the functions that are passed into other functions as arguments (we can say they are passed into Higher Order function)
 
 3. Can you explain what a closure is and how you used it in the counter function? 
 
+When a function is defined in another function, the innner function have access to 
+ to the outer function's variable by a behavior called lexical scoping. For example we can 
+compare it with one-way glass where we can see the outside , but someone from outside cannot see 
+inside. Thus we can say whenever we have created a function within another function, we have
+created a closure. So here in this example nestedFunction() is the closurewhich is also returned 
+by the outer function.
+
+
 4. Describe the four principles of the 'this' keyword.
 
+First principle - Window binding -If we did not give  'this' any context it will return the window, the global object in node or undefined in strict mode.
+
+Second principle - Implicit binding -  When the function (method) is invoked, we need to look to the left of the dot, that's what 'this' refers to. Applies to objects with methods.
+
+Third principle -  Explicit binding - we tell a function what the 'this' keyword should be using, It can be .call, .apply or .bind. 
+.Call will immediately invoke the function and you pass in your arguments 1 by 1. 
+.Apply will immediately invoke the function and you pass in your arguments as an array. 
+.Bind you pass in your arguments 1 by 1, but it will not immediately invoke the function, instead it returns a brand new function that can be invoked later.
+
+Fourth principle- New binding - When a function is invoked with a new keyword the this keyword inside that function is bound to the new object being constructed. When a function is invoked as a constructor function using the new keyword, this points to the new object created.
+
 5. Why do we need super() in an extended class?
+
+Super() is mandatory to be used with extended class, because super in simple language helps inherit things from the parent class, by definition Super keyword is used to call the constructor of the parent class and to access the parent's properties and methods.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 

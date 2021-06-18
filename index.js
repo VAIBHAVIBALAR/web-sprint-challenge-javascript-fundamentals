@@ -33,9 +33,10 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(n) {
-  let counter = 0;
-  for (let i = 0; i <= n; i++){
+ function summation(n) {
+   let counter = 0;
+  for (let i = 0; i <= n; i++)
+  {
     counter  = counter +  i;
   }
   return counter;
@@ -224,7 +225,7 @@ surfaceArea(){
  return 2 * ((this.length * this.width) + (this.length * this.height) + (this.width * this.height));
 }
 }
-const cuboidTwo = new CuboidMakerTwo(10,12,12);
+const cuboidTwo = new CuboidMakerTwo(10, 12, 12);
 
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
